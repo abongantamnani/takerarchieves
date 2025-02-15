@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taker Achieves - Modern Consulting</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f4f7fb;
+            color: #333;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 40px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header .logo img {
+            width: 180px;
+        }
+
+        header nav {
+            text-align: center;
+        }
+
+        header nav ul {
+            display: inline-flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #d4af37;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('build.jpg') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 120px 20px;
+            height: 100vh;
+        }
+
+        .hero h1 {
+            font-size: 4.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.8;
+        }
+
+        .cta-btn {
+            background-color: #d4af37;
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.3rem;
+            border-radius: 25px;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background-color: #b2892f;
+        }
+
+        /* Services Section */
+        .services {
+            background-color: #fff;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .services h2 {
+            font-size: 3rem;
+            margin-bottom: 50px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .service-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .service-card {
+            background-color: #f9f9f9;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .service-card p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            opacity: 0.7;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            background-color: #ecf0f1;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 2.8rem;
+            margin-bottom: 40px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .about p {
+            font-size: 1.2rem;
+            max-width: 900px;
+            margin: 0 auto;
+            opacity: 0.8;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 100px 0;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .testimonials h2 {
+            font-size: 3rem;
+            margin-bottom: 50px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .testimonial-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        .testimonial-card {
+            background-color: #f9f9f9;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            font-style: italic;
+        }
+
+        .testimonial-card p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            opacity: 0.7;
+        }
+
+        .testimonial-card h4 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #d4af37;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 100px 0;
+            background-color: #ecf0f1;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 3rem;
+            margin-bottom: 40px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .contact form {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 15px;
+            font-size: 1.1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 150px;
+        }
+
+        button {
+            background-color: #d4af37;
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.3rem;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #b2892f;
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            border: none;
+            padding: 20px;
+            border-radius: 50%;
+            font-size: 2rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        /* Media Queries */
+        @media screen and (max-width: 768px) {
+            .service-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonial-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="IMG-20250214-WA0012~2.jpg" alt="Taker Achieves Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Welcome to Taker Achieves</h1>
+            <p>Your trusted partner in consulting services to drive business success and growth.</p>
+            <a href="#contact" class="cta-btn">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-cards">
+                <div class="service-card">
+                    <h3>Strategic Consulting</h3>
+                    <p>Helping businesses optimize operations and navigate challenges.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Digital Transformation</h3>
+                    <p>Empowering businesses through innovative technology solutions.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Leadership Development</h3>
+                    <p>Developing future-ready leaders with actionable insights and strategies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/0684423555" target="_blank">
+        <button class="whatsapp-btn">📱</button>
+    </a>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Taker Achieves. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
+
